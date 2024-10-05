@@ -6,4 +6,9 @@ void main() {
     Fraction sum = Fraction(0).plus(Fraction(0));
     expect(sum.intValue(), 0);
   });
+
+  test('non-zero plus zero', () {
+    Fraction sum = Fraction(2).plus(Fraction(0));
+    expect(sum.intValue(), 2);
+  });
 }

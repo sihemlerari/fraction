@@ -8,6 +8,6 @@ class Fraction {
   }
 
   int intValue() {
-    return 0;
+    return numerator;
   }
 }
