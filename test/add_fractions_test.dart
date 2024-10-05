@@ -21,4 +21,10 @@ void main() {
   test('non-zero negative integers', () {
     expect(Fraction(-2).plus(Fraction(-3)).intValue(), -5);
   });
+
+  test('same denominator of 1', () {
+    final Fraction sum = Fraction(2, 1).plus(Fraction(3, 1));
+    expect(sum.numerator, 5);
+    expect(sum.denominator, 1);
+  });
 }
