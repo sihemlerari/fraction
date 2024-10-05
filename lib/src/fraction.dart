@@ -5,7 +5,7 @@ class Fraction {
   Fraction(this.numerator, [this.denominator = 1]);
 
   Fraction plus(Fraction fraction) {
-    return Fraction(numerator + fraction.numerator, 1);
+    return Fraction(numerator + fraction.numerator, denominator);
   }
 
   int intValue() {

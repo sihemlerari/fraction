@@ -27,4 +27,10 @@ void main() {
     expect(sum.numerator, 5);
     expect(sum.denominator, 1);
   });
+
+  test('same denominator but different than 1', () {
+    final Fraction sum = Fraction(3, 7).plus(Fraction(5, 7));
+    expect(sum.numerator, 8);
+    expect(sum.denominator, 7);
+  });
 }
