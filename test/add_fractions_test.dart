@@ -16,4 +16,9 @@ void main() {
     Fraction sum = Fraction(0).plus(Fraction(5));
     expect(sum.intValue(), 5);
   });
+
+  test('non-zero non-negative integers', () {
+    Fraction sum = Fraction(3).plus(Fraction(5));
+    expect(sum.intValue(), 8);
+  });
 }

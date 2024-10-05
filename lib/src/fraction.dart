@@ -6,7 +6,7 @@ class Fraction {
   Fraction plus(Fraction fraction) {
     if (fraction.intValue() == 0) return this;
 
-    return fraction;
+    return Fraction(numerator + fraction.numerator);
   }
 
   int intValue() {
