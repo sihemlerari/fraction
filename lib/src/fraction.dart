@@ -4,7 +4,9 @@ class Fraction {
   Fraction(this.numerator);
 
   Fraction plus(Fraction fraction) {
-    return this;
+    if (fraction.intValue() == 0) return this;
+
+    return fraction;
   }
 
   int intValue() {
