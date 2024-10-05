@@ -11,4 +11,14 @@ class Fraction {
   int intValue() {
     return numerator;
   }
+
+  @override
+  bool operator ==(covariant Fraction other) {
+    if (identical(this, other)) return true;
+
+    return other.numerator == numerator && other.denominator == denominator;
+  }
+
+  @override
+  String toString() => '$numerator/$denominator';
 }
