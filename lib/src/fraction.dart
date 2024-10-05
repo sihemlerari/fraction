@@ -8,10 +8,6 @@ class Fraction {
     return Fraction(numerator + fraction.numerator, denominator);
   }
 
-  int intValue() {
-    return numerator;
-  }
-
   @override
   bool operator ==(covariant Fraction other) {
     if (identical(this, other)) return true;
