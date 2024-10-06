@@ -27,8 +27,8 @@ void main() {
   });
 
   test('negatives', () {
-    expect(gcd(-2, -2), equals(-2));
-    expect(gcd(-7, -7), equals(-7));
+    expect(gcd(-2, -2), equals(2));
+    expect(gcd(-7, -7), equals(7));
   });
 }
 
@@ -38,5 +38,5 @@ int gcd(int a, int b) {
     b = a % t;
     a = t;
   }
-  return a;
+  return a.abs();
 }
