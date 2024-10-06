@@ -16,5 +16,8 @@ class Fraction {
   }
 
   @override
+  int get hashCode => numerator.hashCode ^ denominator.hashCode;
+
+  @override
   String toString() => '$numerator/$denominator';
 }
