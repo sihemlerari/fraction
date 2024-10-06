@@ -2,7 +2,11 @@ class Fraction {
   final int numerator;
   final int denominator;
 
-  Fraction(this.numerator, [this.denominator = 1]);
+  Fraction._(this.numerator, this.denominator);
+
+  factory Fraction(int numerator, [int denominator = 1]) {
+    return Fraction._(numerator, denominator);
+  }
 
   Fraction plus(Fraction fraction) {
     if (fraction.denominator == denominator) {
