@@ -29,4 +29,8 @@ void main() {
   test('same denominator but different than 1', () {
     expect(Fraction(3, 7).plus(Fraction(5, 7)), equals(Fraction(8, 7)));
   });
+
+  test('different denominators without reducing', () {
+    expect(Fraction(2, 3).plus(Fraction(1, 4)), equals(Fraction(11, 12)));
+  });
 }

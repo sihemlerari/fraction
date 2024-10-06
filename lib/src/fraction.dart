@@ -5,7 +5,11 @@ class Fraction {
   Fraction(this.numerator, [this.denominator = 1]);
 
   Fraction plus(Fraction fraction) {
-    return Fraction(numerator + fraction.numerator, denominator);
+    if (fraction.denominator == denominator) {
+      return Fraction(numerator + fraction.numerator, denominator);
+    }
+    return Fraction(numerator * fraction.denominator + fraction.numerator * denominator,
+        denominator * fraction.denominator);
   }
 
   @override
