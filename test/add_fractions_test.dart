@@ -57,5 +57,5 @@ void main() {
 
   test('negative signs everywhere', () {
     expect(Fraction(1, -4).plus(Fraction(-3, -4)), equals(Fraction(1, 2)));
-  }, skip: 'constructor does not yet avoid negative denominators');
+  });
 }
