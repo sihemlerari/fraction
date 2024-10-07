@@ -17,4 +17,10 @@ void main() {
   test('reduce zero', () {
     expect(Fraction(0, 777), equals(Fraction(0)));
   });
+
+  test('reduce negative fractions', () {
+    expect(Fraction(-21, 49), equals(Fraction(-3, 7)));
+    expect(Fraction(12, -16), equals(Fraction(-3, 4)));
+    expect(Fraction(-15, -25), equals(Fraction(3, 5)));
+  });
 }
