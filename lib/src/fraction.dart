@@ -1,3 +1,5 @@
+import 'package:fraction/src/math.dart';
+
 class Fraction {
   final int numerator;
   final int denominator;
@@ -5,7 +7,7 @@ class Fraction {
   Fraction._(this.numerator, this.denominator);
 
   factory Fraction(int numerator, [int denominator = 1]) {
-    final int gcd = 1;
+    final int gcd = Math.greatestCommonDivisor(numerator, denominator);
     return Fraction._(numerator ~/ gcd, denominator ~/ gcd);
   }
 
