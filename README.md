@@ -1,39 +1,44 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Fraction Package
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages). 
+This package implements basic functionality for working with fractions, including addition and equality checks. It follows the principles of **Test-Driven Development (TDD)**, with a focus on tiny steps and frequent commits.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages). 
--->
+## Development Process
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+### Test-Driven Development (TDD)
 
-## Features
+- I started the development process by creating a test list to capture all the ideas and examples I needed to test. This helped me keep track of features and edge cases. As I implemented each feature, I updated the list progressively, deleting items when they were completed.
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- I noticed that TDD helped me drive the design of the code. I only added code that was necessary to make the tests pass, ensuring that the design was minimal and focused. Every piece of added code was justified by a corresponding test.
 
-## Getting started
+- TDD gave me confidence when refactoring code. Since I had a comprehensive test suite, I could make changes without fear of breaking functionality, knowing that the tests would catch any errors introduced during refactoring.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+### Tiny Steps
+- I wrote one small test at a time and then implemented just enough code to make that test pass.
+- This approach ensured lower cost of failure due to taking smaller steps.
 
-## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+### Commit on Every Green Bar
+- After each test passed (the “green bar”), I made a commit to version control. 
+- If I made a mistake, I could easily roll back to the last time everything worked.
 
+For the greatest common divisor (GCD) algorithm (copied from Wikipedia), I used a test-after approach to have more confidence that it works as intended.
+
+## How to Use
+
+To add fractions:
 ```dart
-const like = 'sample';
+final fraction1 = Fraction(1, 2);
+final fraction2 = Fraction(1, 3);
+final result = fraction1 + fraction2; // Or fraction1.plus(fraction2)
+
 ```
 
-## Additional information
+## Running Tests
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+To run the tests, use:
+```dart
+dart test
+```
+
+## Future Features
+- Subtraction, multiplication, and division of fractions.
