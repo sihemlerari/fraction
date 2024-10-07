@@ -7,6 +7,10 @@ class Fraction {
   Fraction._(this.numerator, this.denominator);
 
   factory Fraction(int numerator, [int denominator = 1]) {
+    if (denominator == 0) {
+      throw ArgumentError('denominator can not be 0');
+    }
+
     if (denominator < 0) {
       numerator = -numerator;
       denominator = -denominator;

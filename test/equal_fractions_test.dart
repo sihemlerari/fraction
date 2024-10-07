@@ -26,4 +26,15 @@ void main() {
     expect(Fraction(-1, -2), equals(Fraction(1, 2)));
     expect(Fraction(1, -2), equals(Fraction(-1, 2)));
   });
+
+  test('denominator is 0', () {
+    expect(
+      () => Fraction(1, 0),
+      throwsA(isA<ArgumentError>().having(
+        (e) => e.message,
+        'message',
+        'denominator can not be 0',
+      )),
+    );
+  });
 }
