@@ -5,7 +5,8 @@ class Fraction {
   Fraction._(this.numerator, this.denominator);
 
   factory Fraction(int numerator, [int denominator = 1]) {
-    return Fraction._(numerator, denominator);
+    final int gcd = 1;
+    return Fraction._(numerator ~/ gcd, denominator ~/ gcd);
   }
 
   Fraction plus(Fraction fraction) {
