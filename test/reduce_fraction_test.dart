@@ -13,4 +13,8 @@ void main() {
   test('reduce to whole integer', () {
     expect(Fraction(12, 6), equals(Fraction(2)));
   });
+
+  test('reduce zero', () {
+    expect(Fraction(0, 777), equals(Fraction(0)));
+  });
 }
