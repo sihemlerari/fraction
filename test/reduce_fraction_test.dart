@@ -9,4 +9,8 @@ void main() {
   test('reduce to not whole integer', () {
     expect(Fraction(6, 8), equals(Fraction(3, 4)));
   });
+
+  test('reduce to whole integer', () {
+    expect(Fraction(12, 6), equals(Fraction(2)));
+  });
 }
