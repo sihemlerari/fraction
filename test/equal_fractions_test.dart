@@ -21,4 +21,9 @@ void main() {
   test('whole integer not equal to different whole integer', () {
     expect(Fraction(4), isNot(equals(Fraction(5))));
   });
+
+  test('negative denominator', () {
+    expect(Fraction(-1, -2), equals(Fraction(1, 2)));
+    expect(Fraction(1, -2), equals(Fraction(-1, 2)));
+  });
 }

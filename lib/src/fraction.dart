@@ -7,6 +7,11 @@ class Fraction {
   Fraction._(this.numerator, this.denominator);
 
   factory Fraction(int numerator, [int denominator = 1]) {
+    if (denominator < 0) {
+      numerator = -numerator;
+      denominator = -denominator;
+    }
+
     final int gcd = Math.greatestCommonDivisor(numerator, denominator);
     return Fraction._(numerator ~/ gcd, denominator ~/ gcd);
   }
