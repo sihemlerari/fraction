@@ -21,11 +21,10 @@ class Fraction {
   }
 
   Fraction plus(Fraction fraction) {
-    if (fraction.denominator == denominator) {
-      return Fraction(numerator + fraction.numerator, denominator);
-    }
-    return Fraction(numerator * fraction.denominator + fraction.numerator * denominator,
-        denominator * fraction.denominator);
+    return Fraction(
+      numerator * fraction.denominator + fraction.numerator * denominator,
+      denominator * fraction.denominator,
+    );
   }
 
   @override
