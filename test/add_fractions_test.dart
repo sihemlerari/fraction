@@ -58,4 +58,8 @@ void main() {
   test('negative signs everywhere', () {
     expect(Fraction(1, -4).plus(Fraction(-3, -4)), equals(Fraction(1, 2)));
   });
+
+  test('add fractions using + operator', () {
+    expect(Fraction(1, 9) + Fraction(4, 9), Fraction(5, 9));
+  });
 }

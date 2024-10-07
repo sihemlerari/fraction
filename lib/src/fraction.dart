@@ -27,6 +27,8 @@ class Fraction {
     );
   }
 
+  Fraction operator +(Fraction other) => plus(other);
+
   @override
   bool operator ==(covariant Fraction other) {
     if (identical(this, other)) return true;
