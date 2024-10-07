@@ -20,10 +20,10 @@ class Fraction {
     return Fraction._(numerator ~/ gcd, denominator ~/ gcd);
   }
 
-  Fraction plus(Fraction fraction) {
+  Fraction plus(Fraction other) {
     return Fraction(
-      numerator * fraction.denominator + fraction.numerator * denominator,
-      denominator * fraction.denominator,
+      numerator * other.denominator + other.numerator * denominator,
+      denominator * other.denominator,
     );
   }
 
